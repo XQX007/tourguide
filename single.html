@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080c12">
+  <title>TabFlow · 单行滚动谱</title>
+  <link rel="stylesheet" href="single.css">
+</head>
+<body>
+  <div id="bootError" class="boot-error" hidden></div>
+  <div class="app">
+    <header class="top">
+      <div class="brand">
+        <div class="mark">TF</div>
+        <div>
+          <h1>TabFlow <span>单行滚动谱</span></h1>
+          <p>自动识别每一行 → 拼成一整行 → 按小节滚动</p>
+        </div>
+      </div>
+      <div class="actions">
+        <label for="file" class="btn primary">打开谱面</label>
+        <input id="file" type="file" accept="image/*,application/pdf" hidden>
+        <a href="index.html" class="btn ghost">返回阅读器</a>
+      </div>
+    </header>
+
+    <main class="stage" id="stage">
+      <div id="empty" class="empty">
+        <div class="empty-icon">♬</div>
+        <h2>上传吉他谱，自动拼成一条横向谱</h2>
+        <p>识别六线谱的每一行 → 横向拼接 → 黄色高亮当前小节 → 按节拍滚动</p>
+        <label for="file" class="btn primary">选择图片或 PDF</label>
+        <p class="hint">识别效果取决于谱面清晰度；识别不到时会提示，可先用“返回阅读器”。</p>
+      </div>
+
+      <div id="view" class="view" hidden>
+        <div id="hscroll" class="hscroll">
+          <canvas id="strip"></canvas>
+        </div>
+        <div class="overlay" id="overlay">
+          <div class="dim dim-left"></div>
+          <div class="band" id="band"></div>
+          <div class="dim dim-right"></div>
+          <div class="cursor"></div>
+        </div>
+        <div id="info" class="info">等待识别…</div>
+      </div>
+
+      <div id="loading" class="loading" hidden>
+        <div class="spinner"></div>
+        <p id="loadingText">正在识别六线谱…</p>
+      </div>
+    </main>
+
+    <footer class="bar">
+      <button id="play" class="play" title="空格：开始/暂停">▶</button>
+
+      <div class="ctl">
+        <label>BPM <span id="bpmv">80</span></label>
+        <input id="bpm" type="range" min="40" max="200" step="1" value="80">
+      </div>
+
+      <div class="ctl">
+        <label>拍 / 小节</label>
+        <select id="beats" class="select">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4" selected>4</option>
+          <option value="6">6</option>
+        </select>
+      </div>
+
+      <div class="ctl">
+        <label>一屏小节数</label>
+        <select id="fitMeasures" class="select">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3" selected>3</option>
+          <option value="4">4</option>
+          <option value="6">6</option>
+        </select>
+      </div>
+
+      <div class="ctl">
+        <label>每小节宽度 <span id="mwv">360</span> px</label>
+        <input id="mw" type="range" min="80" max="800" step="10" value="360">
+      </div>
+
+      <button id="barsMode" class="btn small" title="切换小节线来源：固定宽度 / 自动检测">小节线：固定</button>
+      <button id="loop" class="btn small active" title="到末尾回到开头">循环</button>
+      <button id="fs" class="btn small" title="全屏">全屏</button>
+      <div id="status" class="status">等待上传</div>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script>
+    (function () {
+      function show(msg) {
+        var el = document.getElementById('bootError');
+        if (!el) return;
+        el.hidden = false;
+        el.textContent = '页面脚本出错：' + msg;
+      }
+      window.addEventListener('error', function (e) {
+        if (!e.message && !e.error) return;
+        show(e.message || (e.error && e.error.message) || '未知错误');
+      }, true);
+      window.addEventListener('unhandledrejection', function (e) {
+        var r = e.reason;
+        show((r && r.message) || String(r) || 'Promise 错误');
+      });
+    })();
+  </script>
+  <script type="module" src="single.js"></script>
+</body>
+</html>

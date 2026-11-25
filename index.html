@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0e14">
+  <title>TabFlow · 吉他谱动态阅读器</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="bootError" class="boot-error" hidden></div>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">TF</div>
+        <div class="brand-text">
+          <h1>TabFlow</h1>
+          <p>吉他谱动态阅读器</p>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <span id="docName" class="doc-name">未打开文件</span>
+        <label for="fileInput" id="openBtn" class="btn primary" role="button" tabindex="0">打开谱面</label>
+        <a href="single.html" class="btn small ghost" title="自动识别每一行并拼成单行滚动谱">单行模式</a>
+        <button id="helpBtn" class="icon-btn" title="快捷键 (?)">?</button>
+        <input id="fileInput" type="file" accept="image/*,application/pdf" multiple hidden>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-head">
+          <span>页面</span>
+          <span id="pageCountLabel" class="pill">0</span>
+        </div>
+        <div id="pageList" class="page-list"></div>
+        <div class="sidebar-foot">
+          <button id="clearBtn" class="ghost-btn" title="清空当前谱面">清空</button>
+        </div>
+      </aside>
+
+      <section class="reader" id="reader">
+        <div id="dropZone" class="drop-zone">
+          <div class="drop-icon">♬</div>
+          <h2>把吉他谱图片或 PDF 拖到这里</h2>
+          <p>支持 JPG / PNG / WEBP / PDF · 文件只在本地处理，不会上传</p>
+          <div class="drop-actions">
+            <label for="fileInput" id="dropOpenBtn" class="btn primary" role="button" tabindex="0">选择文件</label>
+            <button id="demoBtn" class="ghost-btn">加载示例</button>
+          </div>
+          <div class="drop-hint">提示：先点“打开谱面”，再用空格键开始自动滚动</div>
+        </div>
+
+        <div id="loading" class="loading" hidden>
+          <div class="spinner"></div>
+          <p id="loadingText">正在解析…</p>
+        </div>
+
+        <div id="scroller" class="scroller" hidden>
+          <div id="pages" class="pages"></div>
+          <div id="playhead" class="playhead" hidden></div>
+        </div>
+
+        <div id="focusOverlay" class="focus-overlay" hidden>
+          <div class="focus-dim focus-dim-top"></div>
+          <div class="focus-band"></div>
+          <div class="focus-dim focus-dim-bottom"></div>
+          <div class="focus-cursor"></div>
+        </div>
+
+        <div id="vScroll" class="v-scroll" hidden>
+          <div id="vThumb" class="v-thumb"></div>
+        </div>
+
+        <div id="countdown" class="countdown" hidden>4</div>
+
+        <div id="progressRail" class="progress-rail" hidden>
+          <div id="progressFill" class="progress-fill"></div>
+          <div id="loopRange" class="loop-range" hidden></div>
+          <div id="progressThumb" class="progress-thumb"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bottombar">
+      <div class="control-group transport">
+        <button id="playBtn" class="play-btn" title="空格：开始/暂停">▶</button>
+        <div class="slider-block">
+          <label for="speedSlider"><span id="speedLabel">滚动速度</span> <span id="speedValue">40</span> <span id="speedUnit">px/s</span></label>
+          <input id="speedSlider" type="range" min="5" max="200" step="5" value="40">
+        </div>
+        <button id="beatModeBtn" class="btn small" title="逐行滚动：每个节拍滚动一行">逐行</button>
+      </div>
+
+      <div class="control-group metro">
+        <button id="metroBtn" class="btn small" title="M：节拍器">节拍器</button>
+        <div class="slider-block compact">
+          <label for="bpmSlider">BPM <span id="bpmValue">80</span></label>
+          <input id="bpmSlider" type="range" min="40" max="200" step="1" value="80">
+        </div>
+        <select id="countInSelect" class="select" title="开始前的预备拍">
+          <option value="0" selected>无预备拍</option>
+          <option value="4">预备 4 拍</option>
+          <option value="8">预备 8 拍</option>
+        </select>
+        <select id="lineBeatsSelect" class="select" title="每几拍滚动一行">
+          <option value="1">1 拍/行</option>
+          <option value="2" selected>2 拍/行</option>
+          <option value="4">4 拍/行</option>
+        </select>
+        <div id="beatDots" class="beat-dots" title="节拍指示">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="control-group loop">
+        <button id="setABtn" class="btn small" title="A：设置循环起点">设 A</button>
+        <button id="setBBtn" class="btn small" title="B：设置循环终点">设 B</button>
+        <button id="loopBtn" class="btn small" title="L：开关循环">循环</button>
+        <button id="clearLoopBtn" class="btn small ghost" title="清除 A/B">清除</button>
+        <span id="loopLabel" class="loop-label">A — · B —</span>
+      </div>
+
+      <div class="control-group view">
+        <button id="focusBtn" class="btn small" title="当前行黄色高亮">高亮</button>
+        <button id="zoomOutBtn" class="icon-btn" title="缩小 (-)">−</button>
+        <span id="zoomValue" class="zoom-value">100%</span>
+        <button id="zoomInBtn" class="icon-btn" title="放大 (+)">＋</button>
+        <button id="rotateBtn" class="icon-btn" title="旋转 90° (R)">⟳</button>
+        <button id="fullscreenBtn" class="icon-btn" title="全屏 (F)">⛶</button>
+      </div>
+    </footer>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+  <div id="debugPanel" class="debug-panel" hidden></div>
+
+  <div id="helpModal" class="modal" hidden>
+    <div class="modal-card">
+      <div class="modal-head">
+        <h2>快捷键与使用说明</h2>
+        <button id="helpClose" class="icon-btn" title="关闭">×</button>
+      </div>
+      <div class="shortcut-grid">
+        <div><kbd>空格</kbd><span>开始 / 暂停自动滚动</span></div>
+        <div><kbd>M</kbd><span>开关节拍器</span></div>
+        <div><kbd>A</kbd><span>设置循环起点</span></div>
+        <div><kbd>B</kbd><span>设置循环终点</span></div>
+        <div><kbd>L</kbd><span>开关 A-B 循环</span></div>
+        <div><kbd>+</kbd> / <kbd>-</kbd><span>放大 / 缩小</span></div>
+        <div><kbd>R</kbd><span>旋转 90°</span></div>
+        <div><kbd>H</kbd><span>当前行高亮</span></div>
+        <div><kbd>F</kbd><span>全屏</span></div>
+        <div><kbd>?</kbd><span>打开这个帮助</span></div>
+      </div>
+      <p class="modal-note">提示：A/B 以当前滚动位置为准，循环时自动滚动到 B 会跳回 A。PDF 解析需要保持本地服务器运行。</p>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      function show(msg) {
+        var el = document.getElementById('bootError');
+        if (!el) return;
+        el.hidden = false;
+        el.textContent = '页面脚本出错：' + msg;
+      }
+      window.addEventListener('error', function (e) {
+        if (!e.message && !e.error) return;
+        show(e.message || (e.error && e.error.message) || '未知错误');
+      }, true);
+      window.addEventListener('unhandledrejection', function (e) {
+        var r = e.reason;
+        show((r && r.message) || String(r) || 'Promise 错误');
+      });
+      if (location.protocol === 'file:') {
+        show('请双击 start.bat 启动本地服务器，不要直接打开 index.html；然后访问 http://127.0.0.1:8765/');
+      }
+    })();
+  </script>
+  <script type="module" src="app.js" onerror="document.getElementById('bootError').hidden=false;document.getElementById('bootError').textContent='app.js 加载失败：请确认通过 start.bat 启动服务器，并按 Ctrl+F5 强制刷新';"></script>
+</body>
+</html>

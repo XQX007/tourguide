@@ -1,0 +1,312 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1000' height='1600' viewBox='0 0 1000 1600'>
+<rect width='1000' height='1600' fill='#ffffff'/>
+<rect x='0.5' y='0.5' width='999' height='1599' fill='none' stroke='#e2e8f0'/>
+<text x='60' y='64' font-family='Georgia, serif' font-size='30' font-weight='700' fill='#0f172a'>TabFlow · 示例练习</text>
+<text x='60' y='94' font-family='Arial, sans-serif' font-size='14' fill='#64748b'>标准调弦 E A D G B E · 4/4 · 慢速 · 长页面示例</text>
+<text x='60' y='146' font-family='Arial, sans-serif' font-size='13' fill='#64748b'>Verse 1</text>
+<text x='26' y='230' font-family='Arial, sans-serif' font-size='12' letter-spacing='2' fill='#94a3b8' transform='rotate(-90 26 230)'>TAB</text>
+<g stroke='#334155' stroke-width='1.2'>
+<line x1='70' y1='170' x2='930' y2='170'/>
+<line x1='70' y1='190' x2='930' y2='190'/>
+<line x1='70' y1='210' x2='930' y2='210'/>
+<line x1='70' y1='230' x2='930' y2='230'/>
+<line x1='70' y1='250' x2='930' y2='250'/>
+<line x1='70' y1='270' x2='930' y2='270'/>
+</g>
+<g font-family='Arial, sans-serif' font-size='12' fill='#64748b' text-anchor='end'>
+<text x='56' y='175'>e</text>
+<text x='56' y='195'>B</text>
+<text x='56' y='215'>G</text>
+<text x='56' y='235'>D</text>
+<text x='56' y='255'>A</text>
+<text x='56' y='275'>E</text>
+</g>
+<g stroke='#0f172a' stroke-width='2'>
+<line x1='70' y1='160' x2='70' y2='280'/>
+<line x1='280' y1='160' x2='280' y2='280'/>
+<line x1='490' y1='160' x2='490' y2='280'/>
+<line x1='700' y1='160' x2='700' y2='280'/>
+<line x1='930' y1='160' x2='930' y2='280'/>
+</g>
+<g font-family='Arial, sans-serif' font-size='13' fill='#64748b'>
+<text x='110' y='138'>Em</text>
+<text x='320' y='138'>C</text>
+<text x='530' y='138'>G</text>
+<text x='740' y='138'>D</text>
+</g>
+<g font-family='Georgia, serif' font-size='20' fill='#0f172a' text-anchor='middle'>
+<text x='112' y='177'>0</text>
+<text x='148' y='197'>1</text>
+<text x='184' y='217'>0</text>
+<text x='220' y='237'>2</text>
+<text x='256' y='257'>3</text>
+<text x='322' y='177'>3</text>
+<text x='358' y='197'>0</text>
+<text x='394' y='217'>0</text>
+<text x='430' y='237'>2</text>
+<text x='466' y='257'>3</text>
+<text x='532' y='177'>0</text>
+<text x='568' y='197'>1</text>
+<text x='604' y='217'>0</text>
+<text x='640' y='237'>2</text>
+<text x='676' y='257'>3</text>
+<text x='742' y='177'>3</text>
+<text x='778' y='197'>1</text>
+<text x='814' y='217'>0</text>
+<text x='850' y='237'>2</text>
+<text x='886' y='257'>0</text>
+<text x='922' y='277'>3</text>
+</g>
+<g stroke='#94a3b8' stroke-width='1.6'>
+<line x1='112' y1='164' x2='112' y2='148'/>
+<line x1='148' y1='164' x2='148' y2='148'/>
+<line x1='184' y1='164' x2='184' y2='148'/>
+<line x1='220' y1='164' x2='220' y2='148'/>
+<line x1='256' y1='164' x2='256' y2='148'/>
+</g>
+<text x='60' y='426' font-family='Arial, sans-serif' font-size='13' fill='#64748b'>Chorus 2</text>
+<text x='26' y='510' font-family='Arial, sans-serif' font-size='12' letter-spacing='2' fill='#94a3b8' transform='rotate(-90 26 510)'>TAB</text>
+<g stroke='#334155' stroke-width='1.2'>
+<line x1='70' y1='450' x2='930' y2='450'/>
+<line x1='70' y1='470' x2='930' y2='470'/>
+<line x1='70' y1='490' x2='930' y2='490'/>
+<line x1='70' y1='510' x2='930' y2='510'/>
+<line x1='70' y1='530' x2='930' y2='530'/>
+<line x1='70' y1='550' x2='930' y2='550'/>
+</g>
+<g font-family='Arial, sans-serif' font-size='12' fill='#64748b' text-anchor='end'>
+<text x='56' y='455'>e</text>
+<text x='56' y='475'>B</text>
+<text x='56' y='495'>G</text>
+<text x='56' y='515'>D</text>
+<text x='56' y='535'>A</text>
+<text x='56' y='555'>E</text>
+</g>
+<g stroke='#0f172a' stroke-width='2'>
+<line x1='70' y1='440' x2='70' y2='560'/>
+<line x1='280' y1='440' x2='280' y2='560'/>
+<line x1='490' y1='440' x2='490' y2='560'/>
+<line x1='700' y1='440' x2='700' y2='560'/>
+<line x1='930' y1='440' x2='930' y2='560'/>
+</g>
+<g font-family='Arial, sans-serif' font-size='13' fill='#64748b'>
+<text x='110' y='418'>Em</text>
+<text x='320' y='418'>C</text>
+<text x='530' y='418'>G</text>
+<text x='740' y='418'>D</text>
+</g>
+<g font-family='Georgia, serif' font-size='20' fill='#0f172a' text-anchor='middle'>
+<text x='112' y='457'>0</text>
+<text x='148' y='477'>1</text>
+<text x='184' y='497'>0</text>
+<text x='220' y='517'>2</text>
+<text x='256' y='537'>3</text>
+<text x='322' y='457'>3</text>
+<text x='358' y='477'>0</text>
+<text x='394' y='497'>0</text>
+<text x='430' y='517'>2</text>
+<text x='466' y='537'>3</text>
+<text x='532' y='457'>0</text>
+<text x='568' y='477'>1</text>
+<text x='604' y='497'>0</text>
+<text x='640' y='517'>2</text>
+<text x='676' y='537'>3</text>
+<text x='742' y='457'>3</text>
+<text x='778' y='477'>1</text>
+<text x='814' y='497'>0</text>
+<text x='850' y='517'>2</text>
+<text x='886' y='537'>0</text>
+<text x='922' y='557'>3</text>
+</g>
+<g stroke='#94a3b8' stroke-width='1.6'>
+<line x1='112' y1='444' x2='112' y2='428'/>
+<line x1='148' y1='444' x2='148' y2='428'/>
+<line x1='184' y1='444' x2='184' y2='428'/>
+<line x1='220' y1='444' x2='220' y2='428'/>
+<line x1='256' y1='444' x2='256' y2='428'/>
+</g>
+<text x='60' y='706' font-family='Arial, sans-serif' font-size='13' fill='#64748b'>Verse 3</text>
+<text x='26' y='790' font-family='Arial, sans-serif' font-size='12' letter-spacing='2' fill='#94a3b8' transform='rotate(-90 26 790)'>TAB</text>
+<g stroke='#334155' stroke-width='1.2'>
+<line x1='70' y1='730' x2='930' y2='730'/>
+<line x1='70' y1='750' x2='930' y2='750'/>
+<line x1='70' y1='770' x2='930' y2='770'/>
+<line x1='70' y1='790' x2='930' y2='790'/>
+<line x1='70' y1='810' x2='930' y2='810'/>
+<line x1='70' y1='830' x2='930' y2='830'/>
+</g>
+<g font-family='Arial, sans-serif' font-size='12' fill='#64748b' text-anchor='end'>
+<text x='56' y='735'>e</text>
+<text x='56' y='755'>B</text>
+<text x='56' y='775'>G</text>
+<text x='56' y='795'>D</text>
+<text x='56' y='815'>A</text>
+<text x='56' y='835'>E</text>
+</g>
+<g stroke='#0f172a' stroke-width='2'>
+<line x1='70' y1='720' x2='70' y2='840'/>
+<line x1='280' y1='720' x2='280' y2='840'/>
+<line x1='490' y1='720' x2='490' y2='840'/>
+<line x1='700' y1='720' x2='700' y2='840'/>
+<line x1='930' y1='720' x2='930' y2='840'/>
+</g>
+<g font-family='Arial, sans-serif' font-size='13' fill='#64748b'>
+<text x='110' y='698'>Em</text>
+<text x='320' y='698'>C</text>
+<text x='530' y='698'>G</text>
+<text x='740' y='698'>D</text>
+</g>
+<g font-family='Georgia, serif' font-size='20' fill='#0f172a' text-anchor='middle'>
+<text x='112' y='737'>0</text>
+<text x='148' y='757'>1</text>
+<text x='184' y='777'>0</text>
+<text x='220' y='797'>2</text>
+<text x='256' y='817'>3</text>
+<text x='322' y='737'>3</text>
+<text x='358' y='757'>0</text>
+<text x='394' y='777'>0</text>
+<text x='430' y='797'>2</text>
+<text x='466' y='817'>3</text>
+<text x='532' y='737'>0</text>
+<text x='568' y='757'>1</text>
+<text x='604' y='777'>0</text>
+<text x='640' y='797'>2</text>
+<text x='676' y='817'>3</text>
+<text x='742' y='737'>3</text>
+<text x='778' y='757'>1</text>
+<text x='814' y='777'>0</text>
+<text x='850' y='797'>2</text>
+<text x='886' y='817'>0</text>
+<text x='922' y='837'>3</text>
+</g>
+<g stroke='#94a3b8' stroke-width='1.6'>
+<line x1='112' y1='724' x2='112' y2='708'/>
+<line x1='148' y1='724' x2='148' y2='708'/>
+<line x1='184' y1='724' x2='184' y2='708'/>
+<line x1='220' y1='724' x2='220' y2='708'/>
+<line x1='256' y1='724' x2='256' y2='708'/>
+</g>
+<text x='60' y='986' font-family='Arial, sans-serif' font-size='13' fill='#64748b'>Chorus 4</text>
+<text x='26' y='1070' font-family='Arial, sans-serif' font-size='12' letter-spacing='2' fill='#94a3b8' transform='rotate(-90 26 1070)'>TAB</text>
+<g stroke='#334155' stroke-width='1.2'>
+<line x1='70' y1='1010' x2='930' y2='1010'/>
+<line x1='70' y1='1030' x2='930' y2='1030'/>
+<line x1='70' y1='1050' x2='930' y2='1050'/>
+<line x1='70' y1='1070' x2='930' y2='1070'/>
+<line x1='70' y1='1090' x2='930' y2='1090'/>
+<line x1='70' y1='1110' x2='930' y2='1110'/>
+</g>
+<g font-family='Arial, sans-serif' font-size='12' fill='#64748b' text-anchor='end'>
+<text x='56' y='1015'>e</text>
+<text x='56' y='1035'>B</text>
+<text x='56' y='1055'>G</text>
+<text x='56' y='1075'>D</text>
+<text x='56' y='1095'>A</text>
+<text x='56' y='1115'>E</text>
+</g>
+<g stroke='#0f172a' stroke-width='2'>
+<line x1='70' y1='1000' x2='70' y2='1120'/>
+<line x1='280' y1='1000' x2='280' y2='1120'/>
+<line x1='490' y1='1000' x2='490' y2='1120'/>
+<line x1='700' y1='1000' x2='700' y2='1120'/>
+<line x1='930' y1='1000' x2='930' y2='1120'/>
+</g>
+<g font-family='Arial, sans-serif' font-size='13' fill='#64748b'>
+<text x='110' y='978'>Em</text>
+<text x='320' y='978'>C</text>
+<text x='530' y='978'>G</text>
+<text x='740' y='978'>D</text>
+</g>
+<g font-family='Georgia, serif' font-size='20' fill='#0f172a' text-anchor='middle'>
+<text x='112' y='1017'>0</text>
+<text x='148' y='1037'>1</text>
+<text x='184' y='1057'>0</text>
+<text x='220' y='1077'>2</text>
+<text x='256' y='1097'>3</text>
+<text x='322' y='1017'>3</text>
+<text x='358' y='1037'>0</text>
+<text x='394' y='1057'>0</text>
+<text x='430' y='1077'>2</text>
+<text x='466' y='1097'>3</text>
+<text x='532' y='1017'>0</text>
+<text x='568' y='1037'>1</text>
+<text x='604' y='1057'>0</text>
+<text x='640' y='1077'>2</text>
+<text x='676' y='1097'>3</text>
+<text x='742' y='1017'>3</text>
+<text x='778' y='1037'>1</text>
+<text x='814' y='1057'>0</text>
+<text x='850' y='1077'>2</text>
+<text x='886' y='1097'>0</text>
+<text x='922' y='1117'>3</text>
+</g>
+<g stroke='#94a3b8' stroke-width='1.6'>
+<line x1='112' y1='1004' x2='112' y2='988'/>
+<line x1='148' y1='1004' x2='148' y2='988'/>
+<line x1='184' y1='1004' x2='184' y2='988'/>
+<line x1='220' y1='1004' x2='220' y2='988'/>
+<line x1='256' y1='1004' x2='256' y2='988'/>
+</g>
+<text x='60' y='1266' font-family='Arial, sans-serif' font-size='13' fill='#64748b'>Verse 5</text>
+<text x='26' y='1350' font-family='Arial, sans-serif' font-size='12' letter-spacing='2' fill='#94a3b8' transform='rotate(-90 26 1350)'>TAB</text>
+<g stroke='#334155' stroke-width='1.2'>
+<line x1='70' y1='1290' x2='930' y2='1290'/>
+<line x1='70' y1='1310' x2='930' y2='1310'/>
+<line x1='70' y1='1330' x2='930' y2='1330'/>
+<line x1='70' y1='1350' x2='930' y2='1350'/>
+<line x1='70' y1='1370' x2='930' y2='1370'/>
+<line x1='70' y1='1390' x2='930' y2='1390'/>
+</g>
+<g font-family='Arial, sans-serif' font-size='12' fill='#64748b' text-anchor='end'>
+<text x='56' y='1295'>e</text>
+<text x='56' y='1315'>B</text>
+<text x='56' y='1335'>G</text>
+<text x='56' y='1355'>D</text>
+<text x='56' y='1375'>A</text>
+<text x='56' y='1395'>E</text>
+</g>
+<g stroke='#0f172a' stroke-width='2'>
+<line x1='70' y1='1280' x2='70' y2='1400'/>
+<line x1='280' y1='1280' x2='280' y2='1400'/>
+<line x1='490' y1='1280' x2='490' y2='1400'/>
+<line x1='700' y1='1280' x2='700' y2='1400'/>
+<line x1='930' y1='1280' x2='930' y2='1400'/>
+</g>
+<g font-family='Arial, sans-serif' font-size='13' fill='#64748b'>
+<text x='110' y='1258'>Em</text>
+<text x='320' y='1258'>C</text>
+<text x='530' y='1258'>G</text>
+<text x='740' y='1258'>D</text>
+</g>
+<g font-family='Georgia, serif' font-size='20' fill='#0f172a' text-anchor='middle'>
+<text x='112' y='1297'>0</text>
+<text x='148' y='1317'>1</text>
+<text x='184' y='1337'>0</text>
+<text x='220' y='1357'>2</text>
+<text x='256' y='1377'>3</text>
+<text x='322' y='1297'>3</text>
+<text x='358' y='1317'>0</text>
+<text x='394' y='1337'>0</text>
+<text x='430' y='1357'>2</text>
+<text x='466' y='1377'>3</text>
+<text x='532' y='1297'>0</text>
+<text x='568' y='1317'>1</text>
+<text x='604' y='1337'>0</text>
+<text x='640' y='1357'>2</text>
+<text x='676' y='1377'>3</text>
+<text x='742' y='1297'>3</text>
+<text x='778' y='1317'>1</text>
+<text x='814' y='1337'>0</text>
+<text x='850' y='1357'>2</text>
+<text x='886' y='1377'>0</text>
+<text x='922' y='1397'>3</text>
+</g>
+<g stroke='#94a3b8' stroke-width='1.6'>
+<line x1='112' y1='1284' x2='112' y2='1268'/>
+<line x1='148' y1='1284' x2='148' y2='1268'/>
+<line x1='184' y1='1284' x2='184' y2='1268'/>
+<line x1='220' y1='1284' x2='220' y2='1268'/>
+<line x1='256' y1='1284' x2='256' y2='1268'/>
+</g>
+<text x='60' y='1540' font-family='Arial, sans-serif' font-size='12' fill='#94a3b8'>示例图片，仅用于演示 TabFlow 阅读器 · 按空格开始自动滚动；跟拍模式下每个节拍滚动一截</text>
+</svg>
